@@ -32,7 +32,7 @@ module EJS
     #     # => "function(obj){...}"
     #
     def compile(source, options = {})
-      source = source.dup
+      source = source.dup.to_str
 
       js_escape!(source)
       replace_escape_tags!(source, options)
